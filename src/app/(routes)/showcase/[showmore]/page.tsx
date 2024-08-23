@@ -9,7 +9,7 @@ interface PageProps {
 
 export default async function Page({ params }: PageProps) {
   const id = params.showmore;
-
+ 
   const clientApp = ['0' , '1' , '2'];
   // let usertype;
   // if(id == '0' || id == '1' || id =='2' ){

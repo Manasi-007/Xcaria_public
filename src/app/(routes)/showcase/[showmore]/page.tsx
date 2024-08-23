@@ -16,7 +16,7 @@ export default async function Page({ params }: PageProps) {
   //    usertype = 'client';
   // }
   // console.log("id= ",id);
-  const rawData = await fetch("http://localhost:8080/news");
+  const rawData = await fetch("https://xcaria-public.onrender.com/news");
 
   if (!rawData.ok) {
     throw new Error("Failed to fetch the data!!!");

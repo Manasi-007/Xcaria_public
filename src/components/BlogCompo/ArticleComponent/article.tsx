@@ -1,5 +1,5 @@
 import React from 'react'
-import { getAllPosts } from '../../app/lib/mdx'
+import { getAllPosts } from '@/src/app/lib/mdx'
 import Link from 'next/link';
 import Image from 'next/image';
 import Articlecss from './Article.module.css'

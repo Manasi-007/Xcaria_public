@@ -1,30 +1,32 @@
 // 'use client'
 // import { MDXRemote } from "next-mdx-remote/rsc";
 // import Particle from './particleLog';
-import AnimatedTextWord from "./animatedText";
-// import Particles from "../../../components/particles";
-import styles from "./page.module.css";
-import { datas } from "./datas";
 import Image from "next/image";
 import Link from "next/link";
+// import AnimatedTextWord from "@/src/components/ShowcaseCompo/animatedText";
+// import Particles from "../../../components/particles";
+import AnimatedTextWord from '@/src/components/ShowcaseCompo/animatedText'
+import styles from "./page.module.css";
+import { datas } from "@/src/components/ShowcaseCompo/datas";
 import { createClient } from "@/src/utils/supabase/server";
-import { redirect } from "next/navigation";
+
+// import { redirect } from "next/navigation";
 
 // import { motion } from "framer-motion";
 
 export default async function RemoteMdxPage() {
-  const supabase = createClient();
+  // const supabase = createClient();
 
-  const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {
-    return redirect("/login");
-  }
+  // const { data, error } = await supabase.auth.getUser();
+  // if (error || !data?.user) {
+  //   return redirect("/login");
+  // }
 
-  const { data: activeSession } = await supabase.auth.getSession();
+  // const { data: activeSession } = await supabase.auth.getSession();
 
-	if (!activeSession.session) {
-		return redirect("/auth");
-	}
+	// if (!activeSession.session) {
+	// 	return redirect("/auth");
+	// }
 
 	// const { data: user } = await supabase.from("user").select("*").single();
   // MDX text - can be from a local file, database, CMS, fetch, anywhere...
@@ -54,11 +56,11 @@ export default async function RemoteMdxPage() {
   
   return (
     <>
-      <div className="flex items-center mt-36 justify-center  ">
+      <div className="flex items-center mt-36 justify-center text-white ">
         {/* <Particle id="part"/> */}
         {/* <Particles className="absolute inset-0 -z-10 animate-fade-in" quantity={100}/> */}
-          <AnimatedTextWord text1="An AI tool to make your work smoother" />
-          
+        <AnimatedTextWord/>
+          {/*  */}
       </div>
 
       {/* cards  */}

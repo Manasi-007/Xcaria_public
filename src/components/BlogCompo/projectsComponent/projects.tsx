@@ -75,12 +75,12 @@
 
 // export default Projects;
 import React from 'react';
-import { PROJECTS } from '../../app/(routes)/blog/constants';
+import { PROJECTS } from './projectData';
 import Image from 'next/image';
 import projectcss from './Project.module.css';
-import { Card } from '../card';
+// import { Card } from '../../contact/card';
 
-const Projects: React.FC = () => {
+const Articles: React.FC = () => {
 
   function LightMove(e: React.MouseEvent<HTMLDivElement>) {
     const target = e.currentTarget as HTMLElement;
@@ -128,5 +128,5 @@ const Projects: React.FC = () => {
   );
 };
 
-export default Projects;
+export default Articles;
 

@@ -40,6 +40,7 @@ export const config = {
     // '/',
     // '/login',
     // '/signup',
+    '/home',
     '/blog',
     '/showcase',
     '/projects',

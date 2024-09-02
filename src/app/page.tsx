@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Particles from "../components/particles";
 // import { Redis } from "@upstash/redis";
-import { Card } from "../components/card";
+import { Card } from "./(routes)/contact/card";
 // import { Article } from "./(routes)/projects/article";
 
 const navigation = [

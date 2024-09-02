@@ -2,9 +2,10 @@
 // import React from "react";
 import { motion } from "framer-motion";
 
-const AnimatedTextWord = ({text1}) =>{
+const AnimatedTextWord = () =>{
   // const words = text.split(" ");
-  const letters1 = Array.from(text1);
+  let text = "An AI tool to make your work smoother"
+  const letters1 = Array.from(text);
   // const letters2 = Array.from(text2);
   const fadeInUpAnimation = {
     hidden: {
@@ -35,7 +36,7 @@ const AnimatedTextWord = ({text1}) =>{
     >
        {letters1.map((letter, index) => (
         <motion.span variants={fadeInUpAnimation} key={index}
-        className='uppercase text-center w-[100%] text-3xl sm:text-2xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-slate-400 font-bold leading-tight tracking-tight '>
+        className='uppercase text-center w-[100%] text-6xl sm:text-4xl md:text-5xl text-white bg-clip-text bg-gradient-to-r from-slate-400 font-bold leading-tight tracking-tight '>
           {letter === " " ? " " : letter}
         </motion.span>
       ))}

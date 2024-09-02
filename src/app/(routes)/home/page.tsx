@@ -1,9 +1,11 @@
-"use client";
-import React from 'react'
-import './HeroSection.css'
-import { Spotlight } from '../ui/Spotlight';
+// import React from 'react'
+import './Home.css'
+import { Spotlight } from '@/src/components/homeCompo/Spotlight';
 
-const HeroSection = () => {
+// import Navbar from '@/src/components/Navbar/Navbar'
+// import HeroSection from '@/src/components/HeroSection/HeroSection'
+
+const hero = () => {
   return (
     <div className='text-white h-screen md:[40rem] w-full rounded-md flex flex-col items-center justify-center relative overflow-hidden  mx-auto py-10 md:py-0'>
           <Spotlight
@@ -25,4 +27,4 @@ const HeroSection = () => {
   )
 }
 
-export default HeroSection
+export default hero

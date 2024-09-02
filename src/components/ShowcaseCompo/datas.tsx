@@ -1,8 +1,8 @@
-import  i1 from '../../../../public/data_governance_book.jpg'
-import i2 from '../../../../public/mbi_book.jpg'
-import i3 from '../../../../public/ollama.png'
-import i4 from '../../../../public/microstrategy-logo.png'
-import i5 from '../../../../public/SD.png'
+import  i1 from '@/public/data_governance_book.jpg'
+import i2 from '@/public/mbi_book.jpg'
+import i3 from '@/public/ollama.png'
+import i4 from '@/public/microstrategy-logo.png'
+import i5 from '@/public/SD.png'
 
 export const datas = [
     {

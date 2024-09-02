@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { headers } from "next/headers";
 import { createClient } from "@/src/utils/supabase/server";
-import { redirect } from "next/navigation";
+// import {sig}
+import {signIn} from '../../../utils/actions/auth-actions'
 import { SubmitButton } from "./submit-button";
 
 export default function Login({
@@ -9,47 +10,31 @@ export default function Login({
 }: {
   searchParams: { message: string };
 }) {
-  const signIn = async (formData: FormData) => {
-    "use server";
+  
 
-    const email = formData.get("email") as string;
-    const password = formData.get("password") as string;
-    const supabase = createClient();
+  // const signUp = async (formData: FormData) => {
+  //   "use server";
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+  //   const origin = headers().get("origin");
+  //   const email = formData.get("email") as string;
+  //   const password = formData.get("password") as string;
+  //   const supabase = createClient();
 
-    if (error) {
-      return redirect("/login?message=Could not authenticate user");
-    }
+  //   const { error } = await supabase.auth.signUp({
+  //     email,
+  //     password,
+  //     options: {
+  //       emailRedirectTo: `${origin}/auth/callback`,
+  //     },
+  //   });
 
-    return redirect("/projects");
-  };
+    // if (error) {
+    //   return redirect("/login?message=Could not authenticate user");
+      
+    // }
 
-  const signUp = async (formData: FormData) => {
-    "use server";
-
-    const origin = headers().get("origin");
-    const email = formData.get("email") as string;
-    const password = formData.get("password") as string;
-    const supabase = createClient();
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        emailRedirectTo: `${origin}/auth/callback`,
-      },
-    });
-
-    if (error) {
-      return redirect("/login?message=Could not authenticate user");
-    }
-
-    return redirect("/login?message=Check email to continue sign in process");
-  };
+    // return redirect("/login?message=Check email to continue sign in process"); 
+  // };
 
   return (
     <div className="flex items-center justify-center w-full min-h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
@@ -79,16 +64,17 @@ export default function Login({
           pendingText="Signing In..."
         >
           Sign In
-        </SubmitButton >
-        <button 
-        formAction={signUp}
-        className="bg-gradient-to-r from-cyan-500 to-green-700 rounded-md px-4 py-2 text-white mb-2 hover:from-cyan-600 hover:to-green-800">
-          Sign Up</button>
+        </SubmitButton>
+        {/* <button
+          formAction={signUp}
+          className="bg-gradient-to-r from-cyan-500 to-green-700 rounded-md px-4 py-2 text-white mb-2 hover:from-cyan-600 hover:to-green-800"
+        >Sign Up</button> */}
         {searchParams?.message && (
           <p className="mt-4 p-4 bg-zinc-800/50 text-white text-center rounded-md">
             {searchParams.message}
           </p>
         )}
+        
       </form>
     </div>
   );

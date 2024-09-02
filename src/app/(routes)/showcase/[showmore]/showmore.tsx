@@ -68,7 +68,7 @@
 import { useEffect, useState, FormEvent } from "react";
 import Image from "next/image";
 import styles from '../../showcase/page.module.css';
-import { datas } from "../datas";
+import { datas } from "../../../../components/ShowcaseCompo/datas";
 
 interface News {
   id: string;
@@ -106,7 +106,7 @@ export default function ViewMorePage({ id,news }: ViewMorePageProps) {
 
 
   return (
-    <div className="my-28 mx-4 md:mx-28 space-y-8 md:space-y-20 sm:px-8 md:px-0">
+    <div className="my-28 mx-4 md:mx-28 space-y-8 md:space-y-20 sm:px-8 md:px-0 text-white">
       {/* Heading */}
       <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
         <div className="rounded-full bg-white h-16 w-16 flex justify-center items-center overflow-hidden">
@@ -140,7 +140,7 @@ export default function ViewMorePage({ id,news }: ViewMorePageProps) {
             type="text"
             value={question}
             placeholder="Ask anything"
-            className="w-full h-10 bg-transparent p-2 border border-slate-600 rounded-xl text-sm md:text-base"
+            className="w-full h-10 bg-transparent p-2 border border-slate-600 rounded-xl text-sm md:text-base "
             onChange={(e) => { setQuestion(e.target.value) }}
           />
           <button

@@ -59,7 +59,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react'; // Ensure you import the correct icons
-import { logOut } from '../app/logout/action';
+// import { logOut } from '../app/logout/action';
+import {logOut} from '../utils/actions/auth-actions'
 
 function Nav() {
   const ref = useRef(null);
@@ -88,7 +89,7 @@ function Nav() {
 	  >
 		<div className="container flex items-center justify-between p-6 mx-auto">
 		  {/* Logo on the left */}
-		  <Link href="/projects" className="flex items-center">
+		  <Link href="/home" className="flex items-center">
 			<h1 className="text-xl font-bold text-white">xCaria</h1>
 		  </Link>
   

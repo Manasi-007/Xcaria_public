@@ -2,7 +2,7 @@ import Link from "next/link";
 import { headers } from "next/headers";
 import { createClient } from "@/src/utils/supabase/server";
 // import {sig}
-import {signIn} from '../../../utils/actions/auth-actions'
+import {signIn} from '@/src/utils/actions/auth-actions'
 import { SubmitButton } from "./submit-button";
 
 export default function Login({
